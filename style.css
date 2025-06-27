@@ -1,0 +1,327 @@
+/* General Body Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft YaHei', sans-serif;
+    line-height: 1.8;
+    color: #444;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-radius: 12px;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 40%);
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 300px;
+    height: 300px;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 40%);
+}
+
+header h1 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 700;
+}
+
+header .subtitle {
+    font-size: 1.1em;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 40px;
+}
+
+h2, h3, h4 {
+    font-family: 'Noto Serif SC', serif;
+    color: #333;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #667eea;
+    position: relative;
+}
+
+h2::after {
+    content: '◆';
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #764ba2;
+    font-size: 1em;
+}
+
+
+h3 {
+    font-size: 1.6em;
+    color: #764ba2;
+    margin-top: 30px;
+    padding-left: 15px;
+    border-left: 4px solid #764ba2;
+}
+
+h4 {
+    font-size: 1.3em;
+    color: #667eea;
+    margin-bottom: 10px;
+}
+
+/* Card Styles */
+.card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+/* New Form Styles */
+#user-input .card {
+    border-top: 5px solid #667eea;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.form-group label {
+    flex: 0 0 120px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+    background-color: #fff;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group select:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+.form-group .radio-group {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.form-group input[type="radio"] {
+    margin-right: 8px;
+}
+
+.form-group .radio-group label {
+    font-weight: normal;
+    font-size: 1em;
+    margin-right: 20px;
+}
+
+.cta-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+/* New Skeleton Loading Styles */
+.skeleton {
+    opacity: 0.7;
+    animation: shimmer 1.5s linear infinite forwards;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    color: transparent;
+}
+
+.skeleton-text {
+    width: 100%;
+    height: 1.2em;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.skeleton-text:last-child {
+    margin-bottom: 0;
+}
+
+.skeleton-title {
+    width: 60%;
+    height: 2em;
+    margin: 10px auto 25px;
+}
+
+.skeleton-card {
+    padding: 20px;
+    border-left: 5px solid #ccc;
+    margin-bottom: 25px;
+    background-color: #fafafa;
+    border-radius: 0 8px 8px 0;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.school-card {
+    padding: 20px;
+    border-left: 5px solid #ccc;
+    margin-bottom: 25px;
+    background-color: #fafafa;
+    border-radius: 0 8px 8px 0;
+    transition: border-left-color 0.3s ease;
+}
+
+.tier:nth-of-type(1) .school-card { border-left-color: #ff8c94; /* Coral for '冲刺' */ }
+.tier:nth-of-type(2) .school-card { border-left-color: #9f86c0; /* Amethyst for '稳妥' */ }
+.tier:nth-of-type(3) .school-card { border-left-color: #5eaaa8; /* Teal for '保底' */ }
+
+.school-card:hover {
+    border-left-width: 8px;
+}
+
+
+.school-card h4 {
+    margin-top: 0;
+}
+
+.school-card p:last-child {
+    margin-bottom: 0;
+}
+
+#future-path .card h4 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #888;
+    background-color: #f2f2f2;
+    border-radius: 0 0 12px 12px;
+}
+
+/* General element styles */
+p {
+    margin: 0 0 1em 0;
+}
+
+strong {
+    color: #333;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+}
+
+/* New Simulation Area Styles */
+#simulation-container textarea {
+    width: 100%;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* Important for width */
+    margin-top: 10px;
+}
+
+#simulation-container h4 {
+    color: #333;
+}
+
+#simulation-container p {
+    font-size: 0.95em;
+    color: #666;
+} 

@@ -1,0 +1,9 @@
+{
+  "name": "get-report-function-gemini",
+  "version": "1.0.0",
+  "description": "A cloud function to generate gaokao reports using Google Gemini.",
+  "main": "index.js",
+  "dependencies": {
+    "@google/generative-ai": "^0.14.1"
+  }
+} 
